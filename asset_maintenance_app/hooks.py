@@ -242,3 +242,28 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+fixtures = [
+
+    {"doctype": "Role", "filters": [
+        ["name", "in", ["Maintenance Team Supervisor"]]
+    ]},
+    {"doctype": "Workflow", "filters": [
+        ["name", "in", ["Maintanance Request Approval  Workflow"]]
+    ]},
+    {"doctype": "Property Setter", "filters": [
+        ["name", "in", ["Asset-gross_purchase_amount-read_only","Asset-status-read_only"]]
+    ]},
+    {"doctype": "Workspace", "filters": [
+        ["name", "in", ["Maintenance Dashboard"]]
+    ]},
+     {"doctype": "Module Profile", "filters": [
+        ["name", "in", ["Maintenance Supervisor"]]
+    ]},
+
+]
+
+doc_events = {
+    "Task": {
+        "on_update": "asset_maintenance_app.asset_maintenance_application.doc_event.task.on_update"
+    }
+}

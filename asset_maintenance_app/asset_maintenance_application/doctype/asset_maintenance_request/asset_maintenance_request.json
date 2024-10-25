@@ -1,0 +1,124 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:AM-{MM}-{YYYY}-{####}",
+ "creation": "2024-10-25 16:28:24.375673",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "request_date",
+  "asset",
+  "asset__name",
+  "maintenance_type",
+  "requested_by",
+  "employee_name",
+  "column_break_byru",
+  "department",
+  "priority",
+  "expected_completion_date",
+  "resolution_timehrs",
+  "status"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "request_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Request Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "asset",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Asset",
+   "options": "Asset",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "asset.asset_name",
+   "fieldname": "asset__name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Asset  Name"
+  },
+  {
+   "fieldname": "maintenance_type",
+   "fieldtype": "Select",
+   "label": "Maintenance Type",
+   "options": "Preventive\nCorrective\nEmergency"
+  },
+  {
+   "fieldname": "requested_by",
+   "fieldtype": "Link",
+   "label": "Requested By",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "requested_by.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name"
+  },
+  {
+   "fetch_from": "requested_by.department",
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "\nLow\nHigh\nMedium\nUrgent"
+  },
+  {
+   "fieldname": "expected_completion_date",
+   "fieldtype": "Date",
+   "label": "Expected Completion Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nIn-Progress\nIn-Review\nCompleted"
+  },
+  {
+   "fieldname": "column_break_byru",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "resolution_timehrs",
+   "fieldtype": "Float",
+   "label": "Resolution Time(Hrs)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-10-25 18:19:44.899008",
+ "modified_by": "Administrator",
+ "module": "Asset maintenance application",
+ "name": "Asset Maintenance Request",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

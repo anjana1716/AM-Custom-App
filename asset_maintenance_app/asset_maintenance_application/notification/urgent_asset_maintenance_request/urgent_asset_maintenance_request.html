@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Urgent Asset Maintenance Request</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #d9534f;
+        }
+        .content {
+            margin-top: 15px;
+            line-height: 1.6;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #888888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Urgent Asset Maintenance Request</h2>
+        <p>Hi Team,</p>
+
+        <div class="content">
+            <p>An **urgent** maintenance request has been created with the following details:</p>
+
+            <table>
+                <tr>
+                    <td><strong>Asset:</strong></td>
+                    <td>{{ doc.asset_name }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Request ID:</strong></td>
+                    <td>{{ doc.name }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Priority:</strong></td>
+                    <td><span style="color: red;"><strong>{{ doc.priority }}</strong></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Requested By:</strong></td>
+                    <td>{{ doc.requested_by }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Date:</strong></td>
+                    <td>{{ doc.request_date }}</td>
+                </tr>
+            </table>
+
+            <p>Please take immediate action to resolve this.</p>
+        </div>
+
+    </div>
+</body>
+</html>

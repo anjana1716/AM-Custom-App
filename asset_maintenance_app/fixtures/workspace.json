@@ -1,0 +1,58 @@
+[
+ {
+  "charts": [
+   {
+    "chart_name": "Maintenance Request Chart",
+    "label": "Maintenance Request",
+    "parent": "Maintenance Dashboard",
+    "parentfield": "charts",
+    "parenttype": "Workspace"
+   }
+  ],
+  "content": "[{\"id\":\"bDrv8kEj6j\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Maintenance Dashboard</span>\",\"col\":12}},{\"id\":\"J08SDMw4zt\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Number Of Open Requests\",\"col\":6}},{\"id\":\"2tgHcfpfjc\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Number Of Critical Priority Requests\",\"col\":6}},{\"id\":\"as4MF4WP5o\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Maintenance Request\",\"col\":12}}]",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "solid-success",
+  "indicator_color": "green",
+  "is_hidden": 0,
+  "label": "Maintenance Dashboard",
+  "links": [],
+  "modified": "2024-10-25 18:48:28.565747",
+  "module": null,
+  "name": "Maintenance Dashboard",
+  "number_cards": [
+   {
+    "label": "Total Number Of Open Requests",
+    "number_card_name": "Total Number Of Open Requests",
+    "parent": "Maintenance Dashboard",
+    "parentfield": "number_cards",
+    "parenttype": "Workspace"
+   },
+   {
+    "label": "Total Number Of Critical Priority Requests",
+    "number_card_name": "Total Number Of Critical Priority Requests",
+    "parent": "Maintenance Dashboard",
+    "parentfield": "number_cards",
+    "parenttype": "Workspace"
+   }
+  ],
+  "parent_page": "",
+  "public": 1,
+  "quick_lists": [],
+  "restrict_to_domain": null,
+  "roles": [
+   {
+    "parent": "Maintenance Dashboard",
+    "parentfield": "roles",
+    "parenttype": "Workspace",
+    "role": "Maintenance Team Supervisor"
+   }
+  ],
+  "sequence_id": 1.0,
+  "shortcuts": [],
+  "title": "Maintenance Dashboard"
+ }
+]
